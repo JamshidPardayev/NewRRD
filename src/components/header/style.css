@@ -10,4 +10,5 @@
 }
 .headerLink:hover::before{
     width: 100%;
+    color: #360564;
 }

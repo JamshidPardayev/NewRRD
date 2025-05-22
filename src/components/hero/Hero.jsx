@@ -20,7 +20,7 @@ const Hero = () => {
           stretch: 0,
           depth: 100,
           modifier: 1,
-          slideShadows: false, // orqa soya olib tashlandi
+          slideShadows: false,
         }}
         autoplay={{
           delay: 3000,
@@ -30,21 +30,22 @@ const Hero = () => {
         modules={[EffectCoverflow, Pagination, Autoplay]}
       >
         {[
-          "nature-1.jpg",
-          "nature-2.jpg",
-          "nature-3.jpg",
-          "nature-4.jpg",
-          "nature-5.jpg",
-          "nature-6.jpg",
-          "nature-7.jpg",
-          "nature-8.jpg",
+          "./swiper.jpg",
+          "./swiper6.png",
+          "./swiper8.jpg",
+          "./swiper1.jpg",
+          "./swiper2.jpg",
+          "./swiper3.jpg",
+          "./swiper4.jpg",
+          "./swiper5.jpg",
+          "./swiper7.jpg",
         ].map((img, index) => (
-          <SwiperSlide key={index} className="flex justify-center gap-x-10">
+          <SwiperSlide key={index} className="">
             <div className="w-full h-[450px] max-md:h-[400px] max-sm:h-[350px] mx-auto bg-white rounded-xl overflow-hidden">
               <img
-                src={`https://swiperjs.com/demos/images/${img}`}
+                src={`${img}`}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover "
+                className="w-full h-full"
               />
             </div>
           </SwiperSlide>

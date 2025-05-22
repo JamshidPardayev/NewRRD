@@ -7,6 +7,7 @@ import Posts from "./pages/posts/Posts";
 import Login from "./pages/login/Login";
 import NotFound from "./pages/notFound/NotFound";
 import Layout from "./pages/layout/Layout";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         </Route>
         <Route path="/login" element={<Login />} />
       </Routes>
+      <Toaster position="top-right" reverseOrder={false} />
     </div>
   );
 };
