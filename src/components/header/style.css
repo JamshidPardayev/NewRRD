@@ -1,0 +1,13 @@
+.headerLink.active{
+    border-bottom: 2px solid blue;
+    color: blue;
+    font-weight: bold;
+}
+.headerLink:hover{
+    color: blue;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.headerLink:hover::before{
+    width: 100%;
+}
