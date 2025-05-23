@@ -35,19 +35,21 @@ const Login = () => {
         <h1 className="relative text-[26px] w-[80px] mx-auto font-semibold text-center before:absolute before:left-0 before:bottom-0 before:w-[80px] before:h-[2px] before:bg-white before:scale-0 hover:before:scale-100 cursor-pointer before:duration-300">
           Login
         </h1>
-        <label htmlFor="" className="text-[16px] font-semibold mt-3">
+        <label htmlFor="name" className="text-[16px] font-semibold mt-3">
           Name
         </label>
         <input
           type="text"
+          id="name"
           placeholder="Enter Your Name"
           className="h-[35px] mt-2 border border-[#360564] rounded-[5px] px-2 outline-none shadow-[0px_2px_8px_3px_#360564]"
         />
 
-        <label htmlFor="" className="text-[16px] font-semibold mt-3">
+        <label htmlFor="surname" className="text-[16px] font-semibold mt-3">
           Surname
         </label>
         <input
+        id="surname"
           type="text"
           placeholder="Enter Your SurName"
           className="h-[35px] mt-2 border border-[#360564] rounded-[5px] px-2 outline-none shadow-[0px_2px_8px_3px_#360564]"
@@ -57,7 +59,7 @@ const Login = () => {
           Phone Number
         </label>
         <input
-          type="text"
+          type="number"
           placeholder="Enter Your Phone Number"
           className="h-[35px] mt-2 border border-[#360564] rounded-[5px] px-2 outline-none shadow-[0px_2px_8px_3px_#360564]"
         />
@@ -66,7 +68,7 @@ const Login = () => {
           Email
         </label>
         <input
-          type="text"
+          type="email"
           placeholder="Enter Your Email"
           className="h-[35px] mt-2 border border-[#360564] rounded-[5px] px-2 outline-none shadow-[0px_2px_8px_3px_#360564]"
         />
@@ -75,7 +77,7 @@ const Login = () => {
           Password
         </label>
         <input
-          type="text"
+          type="password"
           placeholder="Enter Your Password"
           className="h-[35px] mt-2 border border-[#360564] rounded-[5px] px-2 outline-none shadow-[0px_2px_8px_3px_#360564]"
         />
