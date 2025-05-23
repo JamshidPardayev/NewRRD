@@ -8,6 +8,7 @@ import Login from "./pages/login/Login";
 import NotFound from "./pages/notFound/NotFound";
 import Layout from "./pages/layout/Layout";
 import { Toaster } from "react-hot-toast";
+import RecipeInfo from "./pages/recipesInfo/RecipeInfo";
 
 const App = () => {
   return (
@@ -18,8 +19,9 @@ const App = () => {
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/users" element={<Users />} />
           <Route path="/posts" element={<Posts />} />
-          <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="/recipeInfo/:id" element={<RecipeInfo />} />
+        <Route path="*" element={<NotFound />} />
         <Route path="/login" element={<Login />} />
       </Routes>
       <Toaster position="top-right" reverseOrder={false} />
