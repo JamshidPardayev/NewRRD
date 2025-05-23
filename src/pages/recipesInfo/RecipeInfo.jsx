@@ -1,12 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const RecipeInfo = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true);
@@ -31,11 +33,11 @@ const RecipeInfo = () => {
   return (
     <div className="max-w-[1200px] mx-auto p-4 min-h-[100vh]">
       <div className="flex gap-x-5">
-        <button className="h-[40px] px-6 bg-violet-900 rounded-2xl hover:bg-violet-800 duration-300 hover:shadow-[3px_3px_5px_#360564] cursor-pointer">
-          Back To Home
+        <button  onClick={()=>navigate("/")} className="h-[40px] px-6 bg-violet-900 rounded-2xl hover:bg-violet-800 duration-300 hover:shadow-[3px_3px_5px_#360564] cursor-pointer">
+          Go Home
         </button>
-        <button className="h-[40px] px-6 bg-violet-900 rounded-2xl hover:bg-violet-800 duration-300 hover:shadow-[3px_3px_5px_#360564] cursor-pointer">
-          Back
+        <button  onClick={()=>navigate(-1)} className="h-[40px] px-6 bg-violet-900 rounded-2xl hover:bg-violet-800 duration-300 hover:shadow-[3px_3px_5px_#360564] cursor-pointer">
+          Go Back
         </button>
       </div>
       <h1 className="text-[28px] font-bold text-center my-6">{recipe?.name}</h1>

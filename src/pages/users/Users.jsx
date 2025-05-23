@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import SkeletonUsers from "../../components/skeleton/SkeletonUsers";
+import SkeletonPosts from "../../components/skeleton/SkeletonPosts";
 
 const Users = () => {
   const [data, setData] = useState(null);
