@@ -20,6 +20,8 @@ import Statistics from "./pages/dashboard/statistics/Statistics";
 import Group1 from "./pages/dashboard/group/group1/Group1";
 import Group2 from "./pages/dashboard/group/group2/Group2";
 import Group3 from "./pages/dashboard/group/group3/Group3";
+import Teachers2 from "./pages/dashboard/teachers/teachers2/Teachers2";
+import Teachers1 from "./pages/dashboard/teachers/teachers1/Teachers1";
 
 const App = () => {
   return (
@@ -42,7 +44,11 @@ const App = () => {
             <Route path="group3" element={<Group3 />} />
           </Route>
           <Route path="profile" element={<Profile />} />
-          <Route path="teachers" element={<Teachers />} />
+          <Route path="teachers" element={<Teachers />}>
+          <Route path="" element={<Teachers1 />} />
+          <Route path="teachers2" element={<Teachers2 />} />
+          
+          </Route>
           <Route path="students" element={<Students />} />
           <Route path="statistics" element={<Statistics />} />
         </Route>

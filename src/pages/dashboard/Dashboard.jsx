@@ -92,7 +92,7 @@ const Dashboard = () => {
       </div>
 
       <div
-        className={`flex-1 relative duration-300 overflow-x-scroll ${
+        className={`flex-1 min-h-[100vh] relative duration-300 overflow-x-auto ${
           collapsed ? "ml-[80px]" : "ml-[250px]"
         }`}
       >

@@ -1,23 +1,71 @@
 import React from "react";
 
 const students = [
-  { name: "Ali", surname: "Karimov", group: "101A", score: 95, rating: "A+" },
-  { name: "Laylo", surname: "Islomova", group: "101A", score: 89, rating: "A" },
-  { name: "Bekzod", surname: "Rasulov", group: "101A", score: 76, rating: "B+" },
-  { name: "Diyora", surname: "Abdurahmonova", group: "101A", score: 68, rating: "C+" },
-  { name: "Javohir", surname: "Sattorov", group: "101A", score: 92, rating: "A" },
-  { name: "Malika", surname: "Tursunova", group: "101A", score: 84, rating: "B+" },
-  { name: "Shahzod", surname: "Nazarov", group: "101A", score: 61, rating: "C" },
-  { name: "Kamola", surname: "Yo'ldosheva", group: "101A", score: 97, rating: "A+" },
-  { name: "Farruh", surname: "Soliev", group: "101A", score: 73, rating: "B" },
-  { name: "Ziyoda", surname: "Toirova", group: "101A", score: 88, rating: "A" },
+  {
+    name: "Ulug'bek",
+    surname: "Rashidov",
+    group: "102B",
+    score: 90,
+    rating: "A",
+  },
+  {
+    name: "Sabina",
+    surname: "Olimova",
+    group: "102B",
+    score: 65,
+    rating: "C+",
+  },
+  {
+    name: "Mironshoh",
+    surname: "Ergashev",
+    group: "102B",
+    score: 79,
+        rating: "B+",
+  },
+  {
+    name: "Nargiza",
+    surname: "Shukurova",
+    group: "102B",
+    score: 99,
+    rating: "A+",
+  },
+  {
+    name: "Rustam",
+    surname: "Jalolov",
+    group: "102B",
+    score: 82,
+    rating: "B+",
+  },
+  {
+    name: "Dilrabo",
+    surname: "Hasanova",
+    group: "102B",
+    score: 70,
+    rating: "B",
+  },
+  { name: "Jasur", surname: "Qudratov", group: "102B", score: 58, rating: "C" },
+  {
+    name: "Zarnigor",
+    surname: "Akbarova",
+    group: "102B",
+    score: 93,
+    rating: "A",
+  },
+  { name: "Aziz", surname: "Mansurov", group: "102B", score: 87, rating: "B+" },
+  {
+    name: "Shoira",
+    surname: "Nurmatova",
+    group: "102B",
+    score: 75,
+    rating: "B",
+  },
 ];
 
 const Group2 = () => {
   return (
     <div className="p-4 flex flex-col">
-      <h2 className="text-xl font-bold mb-4">Student List - Group №1</h2>
-      <table className="min-w-full border border-slate-700 text-left">
+      <h2 className="text-xl font-bold mb-4">Student List - Group №2</h2>
+      <table className="min-w-full border border-slate-700 text-left overflow-x-auto">
         <thead className="bg-violet-900 text-white">
           <tr>
             <th className="p-2 border border-gray-400">№</th>

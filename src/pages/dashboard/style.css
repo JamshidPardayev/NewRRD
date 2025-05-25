@@ -15,3 +15,17 @@
     width: 100%;
     color: blueviolet;
 }
+.teachersLink.active{
+    border-bottom: 2px solid blueviolet;
+    color: blueviolet;
+    font-weight: bold;
+}
+.teachersLink:hover{
+    color: blueviolet;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.teachersLink:hover::before{
+    width: 100%;
+    color: blueviolet;
+}
