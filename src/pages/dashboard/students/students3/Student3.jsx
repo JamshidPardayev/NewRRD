@@ -1,6 +1,6 @@
 import React from "react";
 import men from "../../../../assets/men.jpg";
-const Teachers1 = () => {
+const Student3 = () => {
   return (
     <div>
       <div className="flex gap-6 max-sm:flex-col mt-5">
@@ -12,12 +12,12 @@ const Teachers1 = () => {
           />
         </div>
         <div className="w-[50%] max-sm:w-[100%]">
-          <p className="text-[24px] font-bold ">Jamshid Pardayev</p>
+          <p className="text-[24px] font-bold ">Jasur Pardayev</p>
           <p className="text-[16px] font-medium mt-3 text-gray-300">
-            29.01.2002, 23 years old
+            21.04.2005, 20 years old
           </p>
           <p className="text-[16px] font-medium mt-3 text-gray-300">
-            jamshidnt@gmail.com
+            jasurnt@gmail.com
           </p>
           <p className="text-[16px] font-medium mt-3 text-gray-300">
             +998948811511
@@ -31,4 +31,4 @@ const Teachers1 = () => {
   );
 };
 
-export default Teachers1;
+export default Student3;

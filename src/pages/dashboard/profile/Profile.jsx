@@ -3,15 +3,15 @@ import men from "../../../assets/men.jpg";
 const Profile = () => {
   return (
     <div>
-      <h1 className="relative text-[30px] w-[150px] font-semibold  mb-8 before:absolute before:left-0 before:bottom-0 before:w-[150px] before:h-[2px] before:bg-white before:scale-0 hover:before:scale-100 cursor-pointer before:duration-300">
+         <h1 className="relative text-[30px] w-[150px] font-semibold  mb-8 before:absolute before:left-0 before:bottom-0 before:w-[150px] before:h-[2px] before:bg-white before:scale-0 hover:before:scale-100 cursor-pointer before:duration-300">
         My Profile
       </h1>
-      <div className="flex gap-6 max-sm:flex-col">
+      <div className="flex gap-6 max-sm:flex-col mt-5">
         <div className="w-[50%] max-md:w-[100%] rounded-2xl overflow-hidden">
           <img
             src={men}
             alt="profileImg"
-            className="w-full max-h-[400px] rounded-2xl hover:scale-110 duration-500 cursor-pointer"
+            className="w-full max-w-[450px] rounded-2xl hover:scale-110 duration-500 cursor-pointer"
           />
         </div>
         <div className="w-[50%] max-sm:w-[100%]">

@@ -22,6 +22,11 @@ import Group2 from "./pages/dashboard/group/group2/Group2";
 import Group3 from "./pages/dashboard/group/group3/Group3";
 import Teachers2 from "./pages/dashboard/teachers/teachers2/Teachers2";
 import Teachers1 from "./pages/dashboard/teachers/teachers1/Teachers1";
+import Students1 from "./pages/dashboard/students/students1/Students1";
+import Students2 from "./pages/dashboard/students/students2/Students2";
+import Student3 from "./pages/dashboard/students/students3/Student3";
+import Student4 from "./pages/dashboard/students/student4/Student4";
+import Students5 from "./pages/dashboard/students/students5/Students5";
 
 const App = () => {
   return (
@@ -45,11 +50,16 @@ const App = () => {
           </Route>
           <Route path="profile" element={<Profile />} />
           <Route path="teachers" element={<Teachers />}>
-          <Route path="" element={<Teachers1 />} />
-          <Route path="teachers2" element={<Teachers2 />} />
-          
+            <Route path="" element={<Teachers1 />} />
+            <Route path="teachers2" element={<Teachers2 />} />
           </Route>
-          <Route path="students" element={<Students />} />
+          <Route path="students" element={<Students />}>
+            <Route path="" element={<Students1 />} />
+            <Route path="student2" element={<Students2 />} />
+            <Route path="student3" element={<Student3 />} />
+            <Route path="student4" element={<Student4 />} />
+            <Route path="student5" element={<Students5 />} />
+          </Route>
           <Route path="statistics" element={<Statistics />} />
         </Route>
         <Route path="/login" element={<Login />} />

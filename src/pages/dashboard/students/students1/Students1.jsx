@@ -1,6 +1,6 @@
 import React from "react";
 import men from "../../../../assets/men.jpg";
-const Teachers1 = () => {
+const Students1 = () => {
   return (
     <div>
       <div className="flex gap-6 max-sm:flex-col mt-5">
@@ -31,4 +31,4 @@ const Teachers1 = () => {
   );
 };
 
-export default Teachers1;
+export default Students1;

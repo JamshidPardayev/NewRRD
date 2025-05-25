@@ -29,3 +29,17 @@
     width: 100%;
     color: blueviolet;
 }
+.studentsLink.active{
+    border-bottom: 2px solid blueviolet;
+    color: blueviolet;
+    font-weight: bold;
+}
+.studentsLink:hover{
+    color: blueviolet;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.studentsLink:hover::before{
+    width: 100%;
+    color: blueviolet;
+}
