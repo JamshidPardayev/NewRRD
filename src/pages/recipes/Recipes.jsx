@@ -1,7 +1,7 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SkeletonRecipes from "../../components/skeleton/SkeletonRecipes";
+import { api } from "../../api";
 
 const Recipes = () => {
   const [data, setData] = useState(null);
@@ -10,8 +10,8 @@ const Recipes = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios
-      .get(`https://dummyjson.com/recipes`)
+    api
+      .get(`/recipes`)
       .then((res) => {
         console.log(res);
         setData(res.data);
@@ -46,7 +46,7 @@ const Recipes = () => {
             <div>
               <img src={recipe.image} alt={recipe.name} />
             </div>
-            <h2 className="my-3 text-[20px] font-semibold">{recipe.name}</h2>
+            <h2 className="my-3 text-[20px] font-semibold line-clamp-1">{recipe.name}</h2>
             <Link to={`/recipeInfo/${recipe.id}`}>
               <button className="h-[40px] w-full bg-violet-700 rounded-2xl hover:bg-violet-800 duration-300 hover:shadow-[3px_3px_5px_#360564] cursor-pointer">
                 Get More

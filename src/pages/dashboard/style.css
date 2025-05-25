@@ -1,0 +1,17 @@
+.sidebarLink.active{
+    background: #4d179a;
+}
+.groupLink.active{
+    border-bottom: 2px solid blueviolet;
+    color: blueviolet;
+    font-weight: bold;
+}
+.groupLink:hover{
+    color: blueviolet;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.groupLink:hover::before{
+    width: 100%;
+    color: blueviolet;
+}

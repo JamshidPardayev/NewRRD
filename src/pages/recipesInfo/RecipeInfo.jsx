@@ -1,6 +1,6 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { api } from "../../api";
 
 const RecipeInfo = () => {
   const { id } = useParams();
@@ -8,12 +8,10 @@ const RecipeInfo = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const navigate = useNavigate();
-
   useEffect(() => {
     setLoading(true);
-    axios
-      .get(`https://dummyjson.com/recipes/${id}`)
+    api
+      .get(`/recipes/${id}`)
       .then((res) => {
         setRecipe(res.data);
       })
@@ -32,14 +30,6 @@ const RecipeInfo = () => {
 
   return (
     <div className="max-w-[1200px] mx-auto p-4 min-h-[100vh]">
-      <div className="flex gap-x-5">
-        <button  onClick={()=>navigate("/")} className="h-[40px] px-6 bg-violet-900 rounded-2xl hover:bg-violet-800 duration-300 hover:shadow-[3px_3px_5px_#360564] cursor-pointer">
-          Go Home
-        </button>
-        <button  onClick={()=>navigate(-1)} className="h-[40px] px-6 bg-violet-900 rounded-2xl hover:bg-violet-800 duration-300 hover:shadow-[3px_3px_5px_#360564] cursor-pointer">
-          Go Back
-        </button>
-      </div>
       <h1 className="text-[28px] font-bold text-center my-6">{recipe?.name}</h1>
       <div className="flex gap-5 max-sm:flex-col">
         <img
@@ -48,6 +38,7 @@ const RecipeInfo = () => {
           className="sm:max-w-[400px] rounded-lg mb-4 w-full"
         />
         <div className="flex flex-col">
+          <p className="text-[20px] mb-2">{recipe?.cuisine} Food</p>
           <p className="mb-2 text-[18px] font-semibold">Ingredients:</p>
           <ul className="list-disc list-inside space-y-1 mb-4">
             {recipe?.ingredients?.map((item, i) => (
@@ -56,7 +47,12 @@ const RecipeInfo = () => {
           </ul>
         </div>
       </div>
-      <p className="text-[16px] text-gray-400"><span className="text-[20px] font-semibold text-white">Instructions: </span> {recipe?.instructions}</p>
+      <p className="text-[16px] text-gray-400">
+        <span className="text-[20px] font-semibold text-white">
+          Instructions:{" "}
+        </span>{" "}
+        {recipe?.instructions}
+      </p>
     </div>
   );
 };

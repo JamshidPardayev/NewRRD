@@ -7,6 +7,8 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo1.png"
+
 
 const Footer = () => {
   const [value, setValue] = useState("");
@@ -26,7 +28,7 @@ const Footer = () => {
       <div className="max-w-[1200px] mx-auto px-4 flex justify-between flex-wrap gap-6 font-normal text-gray-400 max-sm:justify-evenly">
         <div>
           <Link to="/">
-            <img src="logo1.png" alt="footerLogo" className="h-[100px]" />
+            <img src={logo} alt="footerLogo" className="h-[100px]" />
           </Link>
           <p className="max-w-[200px]">
             Our site can you give some information about products, users, posts,

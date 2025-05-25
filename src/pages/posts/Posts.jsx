@@ -1,8 +1,9 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import SkeletonPosts from "../../components/skeleton/SkeletonPosts";
 import { AiFillDislike, AiFillLike } from "react-icons/ai";
 import { IoEyeSharp } from "react-icons/io5";
+import { api } from "../../api";
+import { Link } from "react-router-dom";
 
 const Posts = () => {
   const [data, setData] = useState(null);
@@ -11,8 +12,8 @@ const Posts = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios
-      .get(`https://dummyjson.com/posts`)
+    api
+      .get(`/posts`)
       .then((res) => {
         console.log(res);
         setData(res.data);
@@ -40,10 +41,15 @@ const Posts = () => {
       </h1>
       <div className="grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-6 text-gray-400">
         {data?.posts?.map((post) => (
-          <div key={post.id} className="max-w-[350px] flex flex-col justify-between mx-auto content-between text-center rounded-2xl p-4 shadow-[0px_2px_8px_3px_#360564] ">
-            <h2 className="text-[22px] text-white">{post.title}</h2>
-            <p>{post.body}</p>
-            <div className="flex justify-between my-3">
+          <div
+            key={post.id}
+            className="max-w-[350px] flex flex-col justify-between mx-auto content-between text-center rounded-2xl p-4 shadow-[0px_2px_8px_3px_#360564] "
+          >
+            <h2 className="text-[22px] text-white line-clamp-1">{post.title}</h2>
+            <Link to={`/postDetails/${post.id}`}> 
+              <button className="h-[40px] w-full bg-violet-700 rounded-2xl hover:bg-violet-800 duration-300 hover:shadow-[3px_3px_5px_#360564] cursor-pointer my-5">Get More</button>
+            </Link>
+            <div className="flex justify-between">
               <p className="text-[#5603a3] flex gap-1 items-center">
                 <AiFillLike className="text-[25px] " />
                 {post.reactions.likes}

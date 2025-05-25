@@ -10,8 +10,9 @@ const SkeletonUsers = () => {
             key={index}
             className="max-w-[350px] max-sm:w-[300px] flex flex-col rounded-2xl max-sm:mx-auto justify-center p-2 shadow-[0px_2px_8px_3px_#360564]"
           >
-            <div className="h-[250px] bg-gray-800 rounded-2xl mb-2"></div>
-            <div className="h-[150px] bg-gray-800 rounded-2xl mb-2"></div>
+            <div className="h-[200px] bg-gray-800 rounded-2xl mb-2"></div>
+            <div className="h-[50px] bg-gray-800 rounded-2xl mb-2"></div>
+            <div className="h-[40px] bg-gray-800 rounded-2xl mb-2"></div>
           </div>
         ))}
     </div>

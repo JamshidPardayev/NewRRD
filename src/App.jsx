@@ -5,10 +5,21 @@ import Recipes from "./pages/recipes/Recipes";
 import Users from "./pages/users/Users";
 import Posts from "./pages/posts/Posts";
 import Login from "./pages/login/Login";
-import NotFound from "./pages/notFound/NotFound";
 import Layout from "./pages/layout/Layout";
 import { Toaster } from "react-hot-toast";
 import RecipeInfo from "./pages/recipesInfo/RecipeInfo";
+import ProductDetails from "./pages/productDetails/ProductDetails";
+import UserDetails from "./pages/userDetails/UserDetails";
+import PostDetails from "./pages/postDeatils/PostDetails";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Teachers from "./pages/dashboard/teachers/Teachers";
+import Students from "./pages/dashboard/students/Students";
+import Group from "./pages/dashboard/group/Group";
+import Profile from "./pages/dashboard/profile/Profile";
+import Statistics from "./pages/dashboard/statistics/Statistics";
+import Group1 from "./pages/dashboard/group/group1/Group1";
+import Group2 from "./pages/dashboard/group/group2/Group2";
+import Group3 from "./pages/dashboard/group/group3/Group3";
 
 const App = () => {
   return (
@@ -19,9 +30,22 @@ const App = () => {
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/users" element={<Users />} />
           <Route path="/posts" element={<Posts />} />
+          <Route path="/recipeInfo/:id" element={<RecipeInfo />} />
+          <Route path="/productDetails/:id" element={<ProductDetails />} />
+          <Route path="/userDetails/:id" element={<UserDetails />} />
+          <Route path="/postDetails/:id" element={<PostDetails />} />
         </Route>
-        <Route path="/recipeInfo/:id" element={<RecipeInfo />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="" element={<Group />}>
+            <Route path="" element={<Group1 />} />
+            <Route path="group2" element={<Group2 />} />
+            <Route path="group3" element={<Group3 />} />
+          </Route>
+          <Route path="profile" element={<Profile />} />
+          <Route path="teachers" element={<Teachers />} />
+          <Route path="students" element={<Students />} />
+          <Route path="statistics" element={<Statistics />} />
+        </Route>
         <Route path="/login" element={<Login />} />
       </Routes>
       <Toaster position="top-right" reverseOrder={false} />
