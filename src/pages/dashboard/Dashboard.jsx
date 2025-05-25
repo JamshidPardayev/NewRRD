@@ -22,16 +22,15 @@ const Dashboard = () => {
       }
     };
 
-    handleResize(); 
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <div className="text-white flex">
-      {/* Sidebar */}
       <div
-        className={`${
+        className={`fixed top-0 left-0 z-50 ${
           collapsed ? "w-[80px]" : "w-[250px]"
         } h-screen bg-slate-900 p-4 duration-300`}
       >
@@ -92,7 +91,11 @@ const Dashboard = () => {
         </NavLink>
       </div>
 
-      <div className="flex-1">
+      <div
+        className={`flex-1 relative duration-300 overflow-x-scroll ${
+          collapsed ? "ml-[80px]" : "ml-[250px]"
+        }`}
+      >
         <div className="flex justify-between items-center h-[60px] bg-slate-900 px-4">
           <FaArrowRightArrowLeft
             onClick={() => {
@@ -100,26 +103,26 @@ const Dashboard = () => {
                 setCollapsed((prev) => !prev);
               }
             }}
-            className="text-[24px] hover:text-violet-700 cursor-pointer duration-300"
+            className="text-[24px] hover:text-violet-700 cursor-pointer duration-300 max-sm:text-[20px]"
             title="Toggle Sidebar"
           />
           <div>
             <button
               onClick={() => navigate("/")}
-              className="h-[35px] px-6 bg-violet-900 rounded-2xl hover:bg-violet-800 duration-300 hover:shadow-[3px_3px_5px_#360564] cursor-pointer"
+              className="h-[35px] px-6 bg-violet-900 rounded-2xl hover:bg-violet-800 duration-300 hover:shadow-[3px_3px_5px_#360564] cursor-pointer max-sm:px-4 max-sm:text-[14px]"
             >
               Go Home
             </button>
             <button
               onClick={() => navigate(-1)}
-              className="h-[35px] px-6 bg-violet-900 rounded-2xl hover:bg-violet-800 duration-300 hover:shadow-[3px_3px_5px_#360564] cursor-pointer ml-2"
+              className="h-[35px] px-6 bg-violet-900 rounded-2xl hover:bg-violet-800 duration-300 hover:shadow-[3px_3px_5px_#360564] cursor-pointer ml-2 max-sm:px-4 max-sm:text-[14px]"
             >
               Go Back
             </button>
           </div>
         </div>
         <div className="p-4">
-            <Outlet />
+          <Outlet />
         </div>
       </div>
     </div>
